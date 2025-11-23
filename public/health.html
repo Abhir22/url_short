@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>System Health</title>
+  <link rel="stylesheet" href="health.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button id="backBtn" class="btn" style="background: #6b7280;">← Back</button>
+        <h1>System Health</h1>
+      </div>
+      <div class="controls">
+        <button id="refreshBtn" class="btn">Refresh</button>
+        <label class="auto">
+          <input type="checkbox" id="autoToggle" />
+          Auto-refresh
+        </label>
+        <select id="interval" title="Auto refresh interval">
+          <option value="5000">5s</option>
+          <option value="10000" selected>10s</option>
+          <option value="30000">30s</option>
+          <option value="60000">60s</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="panel status-panel" aria-live="polite">
+      <div class="status-badge" id="overallBadge">—</div>
+      <div class="status-details">
+        <div><strong>Database:</strong> <span id="dbStatus">—</span></div>
+        <div><strong>Timestamp:</strong> <span id="timestamp">—</span></div>
+        <div id="errorMsg" class="error" hidden></div>
+      </div>
+    </section>
+
+    <section class="panel info-panel">
+      <h2>Latest Payload</h2>
+      <pre id="payload">{} </pre>
+      <button id="copyBtn" class="btn small">Copy JSON</button>
+    </section>
+
+    <section class="panel history-panel">
+      <h2>Check history</h2>
+      <ul id="historyList" class="history"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Health endpoint: <code id="apiUrl"></code></small>
+    </footer>
+  </main>
+
+  <script src="health.js"></script>
+</body>
+</html>

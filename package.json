@@ -1,0 +1,22 @@
+{
+  "name": "url-short",
+  "version": "1.0.0",
+  "description": "A simple URL shortener like bit.ly",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "init-db": "node src/config/initDb.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nanoid": "^3.3.7",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

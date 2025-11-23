@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Statistics</title>
+  <link rel="stylesheet" href="/stats.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Link Analytics</h1>
+    <button id="backBtn">← Back</button>
+  </header>
+
+  <section class="summary-card">
+    <h2 id="shortCodeTitle">Loading...</h2>
+    <p><strong>Original URL:</strong> <a id="originalUrl" href="#">Loading...</a></p>
+    
+    <div class="summary-grid">
+      <div class="stat">
+        <h3>Total Clicks</h3>
+        <p id="totalClicks">0</p>
+      </div>
+
+      <div class="stat">
+        <h3>Created</h3>
+        <p id="createdAt">--</p>
+      </div>
+
+      <div class="stat">
+        <h3>Last Click</h3>
+        <p id="lastClicked">--</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chart-section">
+    <h2>Clicks Over Time</h2>
+    <canvas id="clickChart"></canvas>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="/stats.js"></script>
+</body>
+</html>

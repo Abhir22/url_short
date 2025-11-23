@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header>
+    <h1>URL Shortener Dashboard</h1>
+    <div>
+    
+      <button id="healthBtn">Check Health</button>
+    </div>
+  </header>
+
+  <section class="add-link">
+    <input type="text" id="targetUrl" placeholder="Enter target URL (required)" />
+    <input type="text" id="customCode" placeholder="Custom short code (optional)" />
+    <button id="addLinkBtn">Add Link</button>
+  </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Short Code</th>
+        <th>Target URL</th>
+        <th>Clicks</th>
+        <th>Last Click</th>
+        <th>Created</th>
+        <th>Copy</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="linksTable"></tbody>
+  </table>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
+
